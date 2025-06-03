@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://u2ogcqf0f1am"]
+
+[ext_resource type="Texture2D" uid="uid://djri2vgrxw5pe" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_wclxh"]
+[ext_resource type="PackedScene" uid="uid://wivv4c18c7si" path="res://scenes/kill_zone.tscn" id="2_tcfq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kk78e"]
+size = Vector2(31, 11)
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_wclxh")
+
+[node name="KillZone" parent="." instance=ExtResource("2_tcfq4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(-0.5, -6.5)
+shape = SubResource("RectangleShape2D_kk78e")

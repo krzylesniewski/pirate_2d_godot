@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://c52jr8opdvfg6"]
+
+[ext_resource type="Texture2D" uid="uid://c3newssmn2boo" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 01.png" id="18_b4c7m"]
+[ext_resource type="Texture2D" uid="uid://b4dqvvockfhnd" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png" id="19_2qavp"]
+[ext_resource type="Texture2D" uid="uid://cdxy5pvtisea6" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 03.png" id="20_h478h"]
+[ext_resource type="Texture2D" uid="uid://cdosr2bxjgr4x" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" id="21_0p2ew"]
+[ext_resource type="Texture2D" uid="uid://blssek5d72th2" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="22_3t8c4"]
+[ext_resource type="Texture2D" uid="uid://c6ss7ppha21pm" path="res://assets/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="23_u6hit"]
+[ext_resource type="Script" path="res://scripts/Crabby.gd" id="24_gfg5u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8axhu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_b4c7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2qavp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h478h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0p2ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3t8c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_u6hit")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="Crabby" type="Node2D"]
+script = ExtResource("24_gfg5u")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(30, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-30, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8axhu")
+animation = &"run"
+autoplay = "run"
