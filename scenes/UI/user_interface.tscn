@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1et7pbubt28f"]
+
+[ext_resource type="Script" path="res://scripts/user_interface.gd" id="1_f6r6r"]
+
+[node name="UserInterface" type="CanvasLayer"]
+script = ExtResource("1_f6r6r")
+
+[node name="coin_score" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "123"
