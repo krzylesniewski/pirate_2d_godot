@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b88tooj5lgyd6"]
+[gd_scene load_steps=15 format=3 uid="uid://b88tooj5lgyd6"]
 
 [ext_resource type="PackedScene" uid="uid://n0yku68cwk6a" path="res://scenes/player.tscn" id="1_j8atm"]
 [ext_resource type="Texture2D" uid="uid://difnuthrdq8ji" path="res://assets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_b24ef"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://wivv4c18c7si" path="res://scenes/kill_zone.tscn" id="5_whsgo"]
 [ext_resource type="PackedScene" uid="uid://u2ogcqf0f1am" path="res://scenes/spikes.tscn" id="6_7cx6m"]
 [ext_resource type="PackedScene" uid="uid://c52jr8opdvfg6" path="res://scenes/enemy/crabby.tscn" id="7_64cfe"]
+[ext_resource type="PackedScene" uid="uid://cr62wf3g5waoo" path="res://scenes/music.tscn" id="8_u01hj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ee8if"]
 texture = ExtResource("2_b24ef")
@@ -307,3 +308,5 @@ position = Vector2(1361, 0)
 
 [node name="Crabby" parent="." instance=ExtResource("7_64cfe")]
 position = Vector2(-61, -10)
+
+[node name="Music" parent="." instance=ExtResource("8_u01hj")]

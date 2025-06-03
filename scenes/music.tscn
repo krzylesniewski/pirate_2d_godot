@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr62wf3g5waoo"]
+
+[ext_resource type="AudioStream" uid="uid://c6ypjhdrn5360" path="res://assets/Sounds/mixkit-you-got-jazz-528.mp3" id="1_e65i5"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="2_am1y7"]
+[ext_resource type="AudioStream" uid="uid://crksrar45pgn8" path="res://assets/Sounds/mixkit-gold-coin-prize-1999.wav" id="2_utprb"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_e65i5")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_am1y7")
+
+[node name="CoinCollectSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_utprb")
+bus = &"SFX"
